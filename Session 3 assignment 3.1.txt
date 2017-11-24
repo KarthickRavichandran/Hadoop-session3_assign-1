@@ -1,0 +1,58 @@
+
+Hadoop 2.x components:
+
+1. HDFS
+2. Map reduce
+3. Yarn
+
+1. HDFS
+=======
+
+Hadoop 1.x cluster have 1 master node and there is node no redundancy in case of node is down. 
+
+But this poblem has over come on Hadoop 2.x. It contains 2 master nodes and any 1 will be active at a times. Secondard master node will act as the redundacy in case of primary node is down.
+
+HDFS designed fo processing large data files and used for steaming data access.
+
+File written once to HDFS will be used for many operations.
+
+Defultsize of Hadoop 2.x ----> 256 MB
+
+It contains slave nodes for storing the data.Data nodes are controlled by data nodes.
+
+Data under the slave nodes will be replicated to 3 other slaves.
+
+Map reduce:
+==========
+
+1. This is building block from processing point of View.
+
+2. This will process on small block of data and this will reduce the Processing time.
+
+3. It has 3 phase for data processing..Mappe phase, sort and shuffle, reduce phase.
+
+4. Initial data will be key, value pairs. This will be source to the mapper. It will be processed and using sort and shuffle the data will be send to rreducer in proper format.
+
+5. Reduce will still reduce the data according to the key and value data and provide the Output data. It can be then used for any query processing.
+
+Yarn:
+=====
+
+3 components of YARN
+
+a. Global Resource Manager
+b. Node Manager
+c. Application Master
+d. Scheduler
+e. Container
+r
+
+YARN Pocess flow
+
+1. When client Submit jobs, Resource Manager will ask node manafger running of data node to start the Application MAster
+
+2. RM negotated with node manager to allocated containe for AM.
+i
+3. AM will request for Container from the Resource Manager.
+
+4. Resourse Manager will talk to Node manager and allocate the Container for tasks.
